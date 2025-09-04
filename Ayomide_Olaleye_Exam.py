@@ -64,17 +64,20 @@ while True:
         
 # QUESTION 2 
 while True:
-    user_input = input("Enter a number (or type 'exit' to quit): ")
-    if user_input == "exit":
-        print("Goodbye!")
-        break        # break out of loop
-    
-    num = int(user_input)   # convert to integer
-    
-    if num % 2 == 0:
-        print("The number is even")
-    else:
-        print("The number is odd")
+    try:
+        user_input = input("Enter a number (or type 'exit' to quit): ")
+        if user_input == "exit":
+            print("Goodbye!")
+            break        # break out of loop
+        
+        num = int(user_input)   # convert to integer
+        
+        if num % 2 == 0:
+            print("The number is even")
+        else:
+            print("The number is odd")
+    except Exception as e:
+        print(f"An error occured: {e}")
 
 
 
